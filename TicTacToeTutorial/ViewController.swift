@@ -18,6 +18,7 @@ class ViewController: UIViewController {
     var gameIsActive = true
     @IBOutlet weak var lobbyField: UITextField!
     
+    @IBOutlet weak var connectionLabel: UILabel!
     
     @IBOutlet weak var label: UILabel!
     @IBOutlet weak var resetBtn: UIButton!
@@ -27,11 +28,6 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         label.isHidden = true
         resetBtn.isHidden = true
-        
-
-      
-        
-
         // Do any additional setup after loading the view, typically from a nib.
     }
     
@@ -44,21 +40,18 @@ class ViewController: UIViewController {
         view.endEditing(true)
         let myDatabase = Database.database().reference(withPath: lobbyField.text!)
         myDatabase.setValue(gameState)
-        
+        connectionLabel.isHidden = false
         retriveBoard()
-        
     }
     
     @IBAction func action(_ sender: AnyObject) {
         let myDatabase = Database.database().reference(withPath: lobbyField.text!)
-
         
         if gameState[sender.tag - 1] == 0{
             gameState[sender.tag - 1] = activePlayer
             
             if activePlayer == 1 {
                 sender.setBackgroundImage(UIImage(named : "cross"), for: UIControlState.normal)
-             //   print(sender.tag)
                 activePlayer = 2
                 myDatabase.setValue(gameState)
                 
@@ -90,11 +83,21 @@ class ViewController: UIViewController {
     }
         
     }
+    @IBAction func resetBoard(_ sender: Any) {
+        gameState = [0,0,0,0,0,0,0,0,0]
+        gameIsActive = true
+        activePlayer = 1
+        label.isHidden = true
+        resetBtn.isHidden = true
+        
+        for i in 1...9{
+            let button = view.viewWithTag(i) as! UIButton
+            button.setBackgroundImage(nil, for: UIControlState.normal)
+        }
+    }
     
     @IBAction func resetPressed(_ sender: Any) {
         gameState = [0,0,0,0,0,0,0,0,0]
-       // let myDatabase = Database.database().reference()
-   //     myDatabase.setValue(gameState)
         gameIsActive = true
         activePlayer = 1
         label.isHidden = true
@@ -118,14 +121,10 @@ class ViewController: UIViewController {
                 if let playerID = snapshotValue as? Int {
                     let pos = snapshot.key
                     if let newPos = Int(pos) {
-                       // self.gameState.insert(playerID, at: newPos)
                         self.gameState[newPos] = playerID
-                        
                         self.updateBoard(index: newPos, player: playerID)
-                        
-                        
                     } else {
-                        print("FAAKDKAKKKKAKAAAYUUUUUDUCKAFACKAFALKKKATJIGATJAGVASAFA")
+                        print("error")
                     }
                 }
             }
