@@ -7,16 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0F41072B2062BB39008CBAD5 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0F41072A2062BB39008CBAD5 /* GoogleService-Info.plist */; };
 		0F6D560A2061A8A30078A3FF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F6D56092061A8A30078A3FF /* AppDelegate.swift */; };
 		0F6D560C2061A8A30078A3FF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F6D560B2061A8A30078A3FF /* ViewController.swift */; };
 		0F6D560F2061A8A30078A3FF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0F6D560D2061A8A30078A3FF /* Main.storyboard */; };
 		0F6D56112061A8A30078A3FF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0F6D56102061A8A30078A3FF /* Assets.xcassets */; };
 		0F6D56142061A8A30078A3FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0F6D56122061A8A30078A3FF /* LaunchScreen.storyboard */; };
-		0F6D561C2061C3450078A3FF /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0F6D561B2061C3450078A3FF /* GoogleService-Info.plist */; };
 		5E1892FC379824281ED15E6B /* Pods_TicTacToeTutorial.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9FDD5537CB93E149641F8CC /* Pods_TicTacToeTutorial.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0F41072A2062BB39008CBAD5 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		0F6D56062061A8A30078A3FF /* TicTacToeTutorial.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TicTacToeTutorial.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0F6D56092061A8A30078A3FF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0F6D560B2061A8A30078A3FF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -24,7 +25,6 @@
 		0F6D56102061A8A30078A3FF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0F6D56132061A8A30078A3FF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0F6D56152061A8A30078A3FF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		0F6D561B2061C3450078A3FF /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		5377C1D50A0F97AC82C146BA /* Pods-TicTacToeTutorial.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TicTacToeTutorial.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TicTacToeTutorial/Pods-TicTacToeTutorial.debug.xcconfig"; sourceTree = "<group>"; };
 		5B18567FBA2D6EC47176C780 /* Pods-TicTacToeTutorial.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TicTacToeTutorial.release.xcconfig"; path = "Pods/Target Support Files/Pods-TicTacToeTutorial/Pods-TicTacToeTutorial.release.xcconfig"; sourceTree = "<group>"; };
 		C9FDD5537CB93E149641F8CC /* Pods_TicTacToeTutorial.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TicTacToeTutorial.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -67,9 +67,9 @@
 				0F6D560B2061A8A30078A3FF /* ViewController.swift */,
 				0F6D560D2061A8A30078A3FF /* Main.storyboard */,
 				0F6D56102061A8A30078A3FF /* Assets.xcassets */,
+				0F41072A2062BB39008CBAD5 /* GoogleService-Info.plist */,
 				0F6D56122061A8A30078A3FF /* LaunchScreen.storyboard */,
 				0F6D56152061A8A30078A3FF /* Info.plist */,
-				0F6D561B2061C3450078A3FF /* GoogleService-Info.plist */,
 			);
 			path = TicTacToeTutorial;
 			sourceTree = "<group>";
@@ -154,7 +154,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0F6D56142061A8A30078A3FF /* LaunchScreen.storyboard in Resources */,
-				0F6D561C2061C3450078A3FF /* GoogleService-Info.plist in Resources */,
+				0F41072B2062BB39008CBAD5 /* GoogleService-Info.plist in Resources */,
 				0F6D56112061A8A30078A3FF /* Assets.xcassets in Resources */,
 				0F6D560F2061A8A30078A3FF /* Main.storyboard in Resources */,
 			);
